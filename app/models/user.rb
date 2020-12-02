@@ -8,6 +8,8 @@ class User < ApplicationRecord
   validates :profile, presence: true
   validates :occupation, presence: true
   validates :position, presence: true
+  validates :password, confirmation: true
+  validates :password_confirmation, presence: true  
 
   has_many :prototypes
   has_many :comments
